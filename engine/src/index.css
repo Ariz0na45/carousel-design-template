@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+/* === PRIMARY FONT — configured by Step 00 Setup ===
+   Replace these @font-face declarations with your primary font.
+   Add one block per weight you have available (300, 400, 500, 600, 700).
+
+   Example:
+   @font-face {
+     font-family: 'Inter';
+     src: url('/fonts/inter-light.woff2') format('woff2');
+     font-weight: 300;
+     font-style: normal;
+   }
+*/
+
+/* === ACCENT FONT — configured by Step 00 Setup ===
+   Replace with your accent font (used italic, 1-2 words per slide).
+
+   Example:
+   @font-face {
+     font-family: 'Playfair Display';
+     src: url('/fonts/playfair-italic.woff2') format('woff2');
+     font-weight: 400;
+     font-style: italic;
+   }
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #000;
+  /* Update font-family to match your primary font */
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}

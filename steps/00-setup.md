@@ -29,9 +29,19 @@ Walk the user through each section of `resources/brand.md` conversationally:
 - Which weights do you have available?
 - Have you placed the font files in `engine/public/fonts/`?
 
+**Card Style & Spacing:**
+- Show me examples of carousels you like, or describe how you want content containers to look
+- What padding feels right around the page edges and inside cards?
+- What border-radius do you prefer for cards? (sharp, slightly rounded, very rounded?)
+
+**Text Styling Rules:**
+- How do you want accent/highlighted words to look? (colored text, underline, background, etc.)
+- How many highlights per slide feels right?
+- Any rules about what gets emphasized vs. what doesn't?
+
 **Aesthetic:**
-- Describe your visual mood in 3-5 words (e.g., "dark, minimal, luxury")
-- Any visual references? (brands, shows, magazines that match your aesthetic)
+- Describe your visual mood in your own words
+- Any visual references? (brands, shows, magazines that match your look)
 - What to absolutely avoid?
 
 **Photos:**

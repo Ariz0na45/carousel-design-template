@@ -5,12 +5,15 @@ interface CarouselSlideProps {
   children: ReactNode
   /** Optional dark overlay opacity 0-1 */
   overlayOpacity?: number
+  /** Page padding — configure in brand.md during setup */
+  padding?: string
 }
 
 export function CarouselSlide({
   backgroundImage,
   children,
   overlayOpacity = 0.25,
+  padding = '48px 40px',
 }: CarouselSlideProps) {
   return (
     <div
@@ -55,7 +58,7 @@ export function CarouselSlide({
           height: '100%',
           display: 'flex',
           flexDirection: 'column',
-          padding: '60px 48px',
+          padding,
         }}
       >
         {children}

@@ -13,7 +13,7 @@ This slide determines whether someone swipes. It must stop the scroll.
 - Max 15 words on screen
 - One clear, bold statement — no explanation yet
 - Accent word in accent font italic (from brand.md)
-- 1 word max highlighted in accent color (from brand.md)
+- Follow the Text Styling Rules from brand.md for highlights and emphasis
 - Must work as a standalone image (no context needed)
 
 **Hook formulas that work:**
@@ -43,8 +43,7 @@ Each slide = one idea. No walls of text.
 - Use the address form specified in brand.md
 - Each slide should make the reader want to see the next one
 - Use section markers to create progression ("02 — THE SYSTEM", "03 — THE METHOD")
-- Accent font italic on 1-2 key words max per slide
-- Accent color highlight on 1 word max per slide
+- Follow the Text Styling Rules from brand.md for accent font usage and highlights
 
 ### End Slide — CTA
 Always the last slide. Two options:

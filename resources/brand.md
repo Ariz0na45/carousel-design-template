@@ -47,7 +47,7 @@ List colors or styles to never use:
 
 ### Accent font
 
-Used for 1-2 accent words per slide. Always italic.
+Used for accent words. Configure usage rules in Text Styling Rules below.
 
 - **Family**: [Font Name]
 - **Files in engine/public/fonts/**: [list font files, e.g., my-accent-italic.ttf]
@@ -57,18 +57,34 @@ Used for 1-2 accent words per slide. Always italic.
 
 Define how content containers look on each slide. Claude applies this when generating App.tsx.
 
-- **Style**: [e.g., "frosted glass (backdrop-filter blur)", "solid dark cards", "gradient cards", "transparent with border only", "soft shadow cards", "none — text directly on background"]
-- **Background**: [e.g., "rgba(255,255,255,0.06)", "rgba(0,0,0,0.5)", "linear-gradient(...)", "transparent"]
-- **Border**: [e.g., "0.5px solid rgba(255,255,255,0.08)", "1px solid accent color", "none"]
-- **Backdrop filter**: [e.g., "blur(20px) saturate(1.2)", "none"]
-- **Shadow**: [e.g., "none", "0 4px 24px rgba(0,0,0,0.3)"]
+- **Style**: (describe how your cards look, or share examples)
+- **Background**: [CSS value]
+- **Border**: [CSS value or "none"]
+- **Backdrop filter**: [CSS value or "none"]
+- **Shadow**: [CSS value or "none"]
+- **Card radius**: [number in px]
+
+## Spacing
+
+- **Page padding**: [e.g., "48px 40px", "60px 48px"]
+- **Gap between cards**: [e.g., "24px", "28px"]
+- **Card padding (large)**: [e.g., "44px 40px"]
+- **Card padding (small)**: [e.g., "24px 36px"]
+- **Pill padding**: [e.g., "16px 36px"]
+
+## Text Styling Rules
+
+- **Accent font usage**: (how many accent words per slide, when to use accent font)
+- **Accent color highlights**: (how many highlights per slide, what gets highlighted)
+- **Rules to follow**: (any constraints on text emphasis)
+- **Rules to avoid**: (anything to never do with text styling)
 
 ## Aesthetic
 
-- **Background mood**: [e.g., dark and moody, bright and clean, warm and earthy, minimalist]
-- **Visual references**: [e.g., "Succession / old money", "Scandinavian minimal", "tech startup clean", "editorial magazine"]
-- **Color grading**: [e.g., desaturated with amber accents, high contrast black/white, warm earth tones]
-- **Never**: [aesthetic exclusions, e.g., gym shots, beach vibes, bright daylight, AI-generated slop]
+- **Background mood**: (describe in your own words)
+- **Visual references**: (brands, shows, magazines that match your look)
+- **Color grading**: (describe the color treatment you want)
+- **Never**: (aesthetic exclusions)
 
 ## Photos
 

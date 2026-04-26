@@ -7,17 +7,18 @@
 
 ## Process
 
-1. **Read brand config** — `resources/brand.md` for accent color, primary font, accent font
-2. **Read design system** — `resources/design-system.md`
+1. **Read brand config** — `resources/brand.md` for accent color, fonts, card style, spacing, text styling rules
+2. **Read design system** — `resources/design-system.md` for technical specs
 3. **Read slide patterns** — `resources/slide-patterns.md`
 4. **Read frontend-design skill** — For creative layout decisions (if installed, otherwise use standard patterns)
 5. **Copy backgrounds** to `engine/public/` if not already there
-6. **Generate `engine/src/App.tsx`** — Build all slides using `<LiquidGlass>` component:
+6. **Generate `engine/src/App.tsx`** — Build all slides using `<Card>` component:
    - Define brand constants at top: `const accent = '{accent color from brand.md}'`
-   - Apply card style from brand.md to every `<LiquidGlass>` via the `style` prop
+   - Apply card style from brand.md to every `<Card>` via the `style` prop
+   - Apply spacing from brand.md (page padding, gaps, card padding)
    - Each slide = a React component following the assigned pattern
-   - Apply copy with correct fonts, sizes, colors from design system
-   - Apply accent words (accent font italic) and highlights (accent color)
+   - Apply copy with correct fonts, sizes, colors
+   - Apply accent words and highlights per Text Styling Rules in brand.md
    - Background image per slide
 7. **Start dev server**:
    ```bash
@@ -28,8 +29,9 @@
 10. **Iterate** until user validates
 
 ## Key rules
-- Always use `<LiquidGlass>` from `src/components/LiquidGlass.tsx` — apply card style from brand.md consistently
-- Follow design system tokens exactly — don't improvise sizes, colors, or spacing
+- Always use `<Card>` from `src/components/Card.tsx` — apply card style from brand.md consistently
+- Follow Text Styling Rules from brand.md for accent usage and highlights
+- Use spacing values from brand.md (page padding, gaps, card padding)
 - Use frontend-design skill for creative layout decisions beyond standard patterns (if installed)
 - Each slide must have `id="carousel-slide"` for Puppeteer export
 

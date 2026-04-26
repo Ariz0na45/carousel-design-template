@@ -38,7 +38,7 @@ Present full carousel in markdown format → user validates copy + layout + back
 Select from photo library or generate backgrounds via Replicate. Skip if using existing photos.
 
 ### Step 05 — Render (`steps/05-render.md`)
-Generate App.tsx using `<LiquidGlass>` component → preview on localhost:5180 → iterate.
+Generate App.tsx using `<Card>` component → preview on localhost:5180 → iterate.
 
 **Optional skill dependency**: `frontend-design` for creative layout decisions beyond standard patterns.
 
@@ -50,7 +50,7 @@ Puppeteer captures each slide → PNG @2x → `output/carousel-design/YYYY-MM-DD
 | File | What |
 |------|------|
 | `resources/brand.md` | Your brand config (colors, fonts, language, tone, aesthetic, photos) |
-| `resources/design-system.md` | Locked design tokens (glass settings, spacing, typography sizes) |
+| `resources/design-system.md` | Technical specs (canvas size, export, typography sizing ranges) |
 | `resources/slide-patterns.md` | 6 reusable layout patterns (A-F) with structure |
 | `resources/copy-rules.md` | Copywriting rules, hook formulas, style annotations |
 
@@ -59,7 +59,7 @@ Puppeteer captures each slide → PNG @2x → `output/carousel-design/YYYY-MM-DD
 1. **Always read brand.md first** — every step reads brand config for colors, fonts, language, tone
 2. **Always read resources/** before designing — design-system.md, slide-patterns.md, copy-rules.md
 3. **Read context/** for audience/brand docs before writing copy (if configured in brand.md)
-4. **Always use `<LiquidGlass>` component** — keep card styling consistent via brand.md
+4. **Always use `<Card>` component** — keep card styling consistent via brand.md
 5. **Slide 1 = 90% of the work** — the hook determines everything
 6. **Slide 2 = second hook** — Instagram may show it on re-impression
 7. **Markdown preview before render** — minimize iteration cycles
@@ -68,7 +68,7 @@ Puppeteer captures each slide → PNG @2x → `output/carousel-design/YYYY-MM-DD
 ## Engine
 
 The rendering engine lives in `engine/`. It's a React + Vite + Tailwind project with:
-- `src/components/LiquidGlass.tsx` — Reusable card/container component (any shape)
+- `src/components/Card.tsx` — Reusable `<Card>` container component (any shape)
 - `src/components/CarouselSlide.tsx` — Base slide wrapper (1080×1350)
 - `scripts/export-slides.mjs` — Puppeteer PNG export
 - `scripts/crop-backgrounds.mjs` — Sharp image preprocessing

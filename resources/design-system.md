@@ -1,8 +1,8 @@
-# Carousel Design System
+# Carousel Design System — Technical Specs
 
-Locked tokens — do not deviate without user approval.
+These are platform-level technical requirements, not design choices. Design choices live in `resources/brand.md`.
 
-**Important**: Read `resources/brand.md` first for brand-specific values (accent color, fonts, aesthetic).
+**Important**: Read `resources/brand.md` first for all brand-specific values.
 
 ## Canvas
 - **Size**: 1080 × 1350px (Instagram 4:5)
@@ -11,30 +11,29 @@ Locked tokens — do not deviate without user approval.
 
 ## Typography
 
-### Primary font (configured in brand.md)
-| Use | Weight | Size | Letter-spacing |
-|-----|--------|------|----------------|
-| Hero headline | Bold (700) | 80–88px | -2.5 to -3px |
-| Section title | Bold (700) | 56–64px | -1.5 to -2px |
-| Body / description | Light (300) or Regular (400) | 42–52px | default |
-| Section marker | Light (300), uppercase | 28px | 3–4px |
-| CTA text | Medium (500) | 32px | default |
-| Small label | Light (300) | 28px | 0.5px |
-| List items | Regular (400) / Bold (700) | 42–44px | -0.5px |
+### Sizing ranges (from config)
 
-### Accent font (configured in brand.md)
-Used for **1-2 accent words per slide** max. Always italic.
-| Use | Weight | Size |
-|-----|--------|------|
-| Accent word in headline | Italic (400) | Same as surrounding headline |
-| Accent word in body | Italic (400) | Same as surrounding body |
+Font sizes configured during setup. These are recommended ranges for readability on Instagram — IG compresses carousels heavily.
 
-### Font files
-Located in `engine/public/fonts/`. Configured during Step 00 Setup.
+| Use | Recommended range | Minimum |
+|-----|-------------------|---------|
+| Hero headline | 70-88px | 64px |
+| Section title | 50-64px | 44px |
+| Body / description | 38-52px | 36px |
+| Section marker | 24-32px | 22px |
+| CTA text | 28-36px | 26px |
+| Small label | 24-32px | 22px |
 
-## Colors
+### Font families (from config)
+- **Primary font**: See `brand.md`
+- **Accent font**: See `brand.md`
+- Font files located in `engine/public/fonts/`, configured during Step 00.
 
-### Text
+## Colors (from config)
+
+### Text palette
+See `brand.md` for your text color palette. Default for dark backgrounds:
+
 | Name | Value | Use |
 |------|-------|-----|
 | White 100% | `#FFFFFF` | Headlines, primary text |
@@ -43,43 +42,25 @@ Located in `engine/public/fonts/`. Configured during Step 00 Setup.
 | White 45% | `rgba(255,255,255,0.45)` | Section markers |
 | White 35% | `rgba(255,255,255,0.35)` | Strikethrough text, labels |
 
-### Accent
-| Name | HEX | Use |
-|------|-----|-----|
-| Accent color | See `brand.md` | Highlight words (1-2 per slide), arrows, keyword CTA |
+Adjust this palette in `brand.md` if your aesthetic uses light backgrounds.
 
-### Never use
-- See color exclusions in `brand.md`
-- Multiple accent colors on the same slide
+### Accent color
+See `brand.md` for your accent color.
 
 ## Card Component
 
-The `<LiquidGlass>` component is a generic layout wrapper for content containers. It handles border-radius, padding, and centering. The visual style (background, border, blur, shadow) is applied via the `style` prop based on the Card Style defined in `brand.md`.
+The `<Card>` component (in `src/components/Card.tsx`) is a generic layout wrapper for content containers. It handles border-radius, padding, and centering. The visual style (background, border, blur, shadow) is applied via the `style` prop based on the Card Style defined in `brand.md`.
 
-During Step 05, Claude reads brand.md and applies your card style to every `<LiquidGlass>` instance. You can use any CSS approach: frosted glass (`backdrop-filter: blur()`), solid cards, gradients, borders only, or no containers at all.
+During Step 05, Claude reads brand.md and applies your card style to every `<Card>` instance.
 
-### Shape presets
-| Shape | radius | Use |
-|-------|--------|-----|
-| Large card | 36 | Hero content, main statements |
-| Medium card | 32 | Body content, descriptions |
-| Small card | 28 | Secondary info, save bar |
-| Pill bar | 50 | Horizontal CTA bars |
-| Circle/Pill CTA | 999 | Buttons, icon badges |
+### Shape presets (from config)
+Card radius, spacing, and padding values are configured during setup in `brand.md`. The `<Card>` component accepts a `radius` prop.
 
-## Spacing
+## Spacing (from config)
 
-| Element | Value |
-|---------|-------|
-| Page padding | 60–64px all sides |
-| Gap between cards | 28px |
-| Card padding (large) | 48–56px vertical, 44–56px horizontal |
-| Card padding (small) | 24–28px vertical, 36–48px horizontal |
-| Pill padding | 16px vertical, 36–40px horizontal |
-| Section marker to content | 32–40px |
+Page padding, gaps between cards, and card padding are defined during setup in `brand.md`. The `<CarouselSlide>` component accepts a `padding` prop.
 
 ## Backgrounds
 - Always full-bleed photos from your photo library (see `brand.md` for path)
-- Dark overlay only if needed for contrast (rgba(0,0,0,0.1–0.2) max)
 - Match the aesthetic direction defined in `brand.md`
-- Never: solid black, AI-generated slop, backgrounds that clash with your brand aesthetic
+- Respect style exclusions from `brand.md`

@@ -10,7 +10,7 @@ import type { CSSProperties, ReactNode } from 'react'
   This component handles layout only. Style it via the `style` prop.
 */
 
-export interface LiquidGlassProps {
+export interface CardProps {
   children?: ReactNode
   className?: string
   style?: CSSProperties
@@ -24,11 +24,11 @@ export interface LiquidGlassProps {
   inline?: boolean
 }
 
-export function LiquidGlass({
+export function Card({
   children,
   className,
   style,
-  radius = 32,
+  radius = 24,
   width,
   height,
   p,
@@ -36,7 +36,7 @@ export function LiquidGlass({
   py,
   center = false,
   inline = false,
-}: LiquidGlassProps) {
+}: CardProps) {
   const paddingStyle = p
     ? p
     : (px !== undefined || py !== undefined)

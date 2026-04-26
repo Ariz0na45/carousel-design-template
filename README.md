@@ -2,7 +2,7 @@
 
 An end-to-end Instagram carousel generator for [Claude Code](https://claude.ai/code). Give it a topic — it handles ideation, copywriting, design, rendering, and PNG export.
 
-Built for the [flow-os](https://github.com/Ariz0na45/Business-OS-brain) skill system.
+Built for the [flow-os](https://github.com/your-username/flow-os) skill system.
 
 ## What it does
 
@@ -25,9 +25,9 @@ Everything is customizable through a single file: `resources/brand.md`.
 |------|-----------|
 | **Colors** | Accent color, text palette, exclusions |
 | **Typography** | Primary font + accent font (bring your own .otf/.ttf/.woff2) |
-| **Card style** | Frosted glass, solid cards, gradients, borders only, transparent — your call |
+| **Card style** | Your choice — describe how content containers should look |
 | **Language** | English, French, Spanish, German — any language |
-| **Tone** | Calm authority, energetic, academic, provocative — with example sentences |
+| **Tone** | Your voice — with example sentences |
 | **Photos** | Your photo library path, subject description for AI generation |
 | **Aesthetic** | Background mood, visual references, color grading |
 | **CTAs** | Save and Comment templates in your language |
@@ -51,7 +51,7 @@ Everything is customizable through a single file: `resources/brand.md`.
 
 ```bash
 # Clone into imports/
-git clone https://github.com/Ariz0na45/carousel-design-template.git imports/carousel-design
+git clone https://github.com/your-username/carousel-design-template.git imports/carousel-design
 
 # Import using flow-os import-skill
 bun .claude/skills/import-skill/scripts/import-skill.ts imports/carousel-design
@@ -61,7 +61,7 @@ bun .claude/skills/import-skill/scripts/import-skill.ts imports/carousel-design
 
 ```bash
 # Clone directly into skills
-git clone https://github.com/Ariz0na45/carousel-design-template.git .claude/skills/carousel-design
+git clone https://github.com/your-username/carousel-design-template.git .claude/skills/carousel-design
 
 # Install engine dependencies
 cd .claude/skills/carousel-design/engine && bun install
@@ -100,7 +100,7 @@ carousel-design/
 ├── input/photos/               # Your background photos go here
 ├── engine/
 │   ├── src/components/
-│   │   ├── LiquidGlass.tsx     # Card container (layout wrapper)
+│   │   ├── Card.tsx            # Card container component (layout wrapper)
 │   │   └── CarouselSlide.tsx   # Base slide (1080×1350 + bg + overlay)
 │   ├── scripts/
 │   │   ├── export-slides.mjs   # Puppeteer PNG export

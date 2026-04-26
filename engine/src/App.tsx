@@ -9,7 +9,7 @@
   Pattern: Define brand constants at the top, then one function per slide.
 */
 
-import { LiquidGlass } from './components/LiquidGlass'
+import { Card } from './components/Card'
 
 // Brand constants — Claude fills these from brand.md during Step 05
 const accent = '#YOUR_ACCENT_COLOR'        // e.g., '#E63946', '#2563EB', '#059669'
@@ -32,7 +32,8 @@ function Slide({ children, bg }: { children: React.ReactNode; bg: string }) {
       <div style={{
         position: 'relative', zIndex: 10, width: '100%', height: '100%',
         display: 'flex', flexDirection: 'column',
-        padding: '60px 48px',
+        // Page padding — Claude sets this from brand.md
+        padding: '48px 40px',
       }}>
         {children}
       </div>
@@ -45,8 +46,8 @@ function Slide1() {
   return (
     <Slide bg="/bg-01.jpg">
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: 28 }}>
-        <LiquidGlass radius={36} style={{ width: '100%' }}>
-          <div style={{ padding: '52px 48px', textAlign: 'center' }}>
+        <Card radius={24} style={{ width: '100%' }}>
+          <div style={{ padding: '44px 40px', textAlign: 'center' }}>
             <h1 style={{
               color: '#fff', fontSize: 74, fontWeight: 700,
               lineHeight: 1.15, letterSpacing: '-2.5px',
@@ -60,10 +61,10 @@ function Slide1() {
               </span>
             </h1>
           </div>
-        </LiquidGlass>
+        </Card>
 
-        <LiquidGlass radius={32} style={{ width: '100%' }}>
-          <div style={{ padding: '28px 44px', textAlign: 'center' }}>
+        <Card radius={24} style={{ width: '100%' }}>
+          <div style={{ padding: '24px 40px', textAlign: 'center' }}>
             <p style={{
               color: 'rgba(255,255,255,0.85)', fontSize: 42, fontWeight: 300,
               lineHeight: 1.4,
@@ -71,9 +72,9 @@ function Slide1() {
               Supporting text goes here.
             </p>
           </div>
-        </LiquidGlass>
+        </Card>
 
-        <LiquidGlass radius={50} style={{ alignSelf: 'center' }}>
+        <Card radius={50} style={{ alignSelf: 'center' }}>
           <div style={{ padding: '16px 40px', textAlign: 'center' }}>
             <p style={{
               color: 'rgba(255,255,255,0.85)', fontSize: 32, fontWeight: 500,
@@ -81,7 +82,7 @@ function Slide1() {
               Swipe to learn more →
             </p>
           </div>
-        </LiquidGlass>
+        </Card>
       </div>
     </Slide>
   )
@@ -93,7 +94,7 @@ function Slide2() {
     <Slide bg="/bg-02.jpg">
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
         <div style={{ position: 'relative' }}>
-          <LiquidGlass radius={50} style={{ width: '100%' }}>
+          <Card radius={50} style={{ width: '100%' }}>
             <div style={{ padding: '44px 48px', textAlign: 'center' }}>
               <p style={{
                 color: '#fff', fontSize: 48, fontWeight: 700,
@@ -102,12 +103,12 @@ function Slide2() {
                 Save this for later
               </p>
             </div>
-          </LiquidGlass>
+          </Card>
           {/* Bookmark badge — overlapping top-right */}
           <div style={{ position: 'absolute', top: -20, right: -10 }}>
-            <LiquidGlass radius={999} width={88} height={88} center>
+            <Card radius={999} width={88} height={88} center>
               <img src="/icons/bookmark.svg" alt="" style={{ width: 36, height: 36 }} />
-            </LiquidGlass>
+            </Card>
           </div>
         </div>
       </div>

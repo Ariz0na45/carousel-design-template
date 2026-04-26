@@ -57,7 +57,7 @@ Adapt all sections below to match the aesthetic, mood, and color grading specifi
 
 ### Prompt template
 ```
-A cinematic portrait photograph in 9:16 vertical format. [SUBJECT from brand.md], [pose/action], in [environment]. [Lighting description matching brand aesthetic]. The mood is [mood from brand.md]. [Color grading from brand.md]. Shot on a 50mm lens, shallow depth of field. No text, no overlays. Use the attached reference photo for the person's exact likeness.
+A [style from brand.md] portrait photograph in 9:16 vertical format. [SUBJECT from brand.md], [pose/action], in [environment]. [Lighting description matching brand aesthetic]. The mood is [mood from brand.md]. [Color grading from brand.md]. Shot on a 50mm lens, shallow depth of field. No text, no overlays. Use the attached reference photo for the person's exact likeness.
 ```
 
 ## Output
